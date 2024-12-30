@@ -1,0 +1,68 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1594737625785-42ff8c50e2a5') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styles */
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #ff5733;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    background-color: #ff5733;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff884d;
+}
+
+/* Animasi Slide-in */
+.slide-in {
+    animation: slide-in 1s ease-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

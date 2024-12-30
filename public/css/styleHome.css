@@ -1,0 +1,101 @@
+/* Tambahkan gaya CSS ini ke file styleHome.css Anda */
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex; /* Mengatur elemen navbar menjadi flex */
+  justify-content: space-between; /* Memberikan jarak antara logo dan menu navigasi */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  padding: 20px 5%; /* Memberikan jarak atas 20px dan jarak kanan-kiri 5% */
+  background-color: #f8f9fa; /* Contoh warna background, bisa disesuaikan */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Opsional: memberikan bayangan */
+}
+
+.logo a {
+  text-decoration: none; /* Menghapus garis bawah pada teks */
+  font-size: 24px; /* Ukuran font logo */
+  font-weight: bold; /* Membuat teks lebih tebal */
+  color: #333; /* Warna teks logo */
+}
+
+.menu-nav {
+  display: flex; /* Menyusun menu secara horizontal */
+  gap: 15px; /* Memberikan jarak antar tautan menu */
+}
+
+.menu-nav a {
+  text-decoration: none; /* Menghapus garis bawah pada teks tautan */
+  color: #555; /* Warna teks menu */
+  font-size: 16px; /* Ukuran font menu */
+  transition: color 0.3s ease; /* Efek transisi saat hover */
+}
+
+.menu-nav a:hover {
+  color: #007bff; /* Warna teks saat hover */
+}
+.menu-nav a.active {
+  color: #007bff; /* Warna teks saat aktif */
+}
+
+main{
+  display: block;
+  margin-top: 2rem;
+  padding: 0 5%; /* Memberikan jarak kanan dan kiri 5% */
+}
+
+.hero-secttion {
+  display: flex; /* Mengatur elemen menjadi flex */
+  justify-content: space-between; /* Memberikan jarak antara aksi dan gambar */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  gap: 20px;
+}
+
+.aksi {
+  width: 70%;
+  /* border: 1px solid red; */
+}
+
+.aksi h1{
+  font-size: 50px;
+}
+
+.gambar {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gambar .gambar-1{
+  position: absolute;
+  transform: translate(-65%, 0);
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 2;
+}
+
+.gambar .gambar-2{
+  width: 320px;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  object-position: center;
+}
+
+
+
+
+
+
+
+
+

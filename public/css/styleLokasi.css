@@ -1,0 +1,92 @@
+/* Reset Margin dan Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HTML dan Body Styling */
+html, body {
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+body {
+  background-color: #f8f9fa; /* Warna background abu terang */
+  color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff; /* Latar belakang terang */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Perbaikan bayangan lebih terlihat */
+  position: relative; /* Pastikan box-shadow tampil */
+  z-index: 10; /* Menjadikan navbar di atas elemen lain */
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-nav a {
+  margin: 0 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.menu-nav a:hover,
+.menu-nav a.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Lokasi Section */
+.lokasi {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.lokasi-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lokasi-container h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.lokasi-container p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Styling Google Maps */
+.lokasi-maps {
+  display: flex;
+  justify-content: center;
+}
+
+.lokasi-maps iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border: none; /* Hilangkan border default */
+  border: 8px solid #007bff; /* Border keren berwarna biru */
+  border-radius: 15px; /* Border radius membulat */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efek bayangan lembut */
+}
