@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Dashboard</title>
-    <link rel="stylesheet" href="/css/styleDashboard.css">
+    <link rel="icon" type="image/png" href="images/dashboard_16912971.png">
+    <title>Dashboard Admin - Garuda Gym</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleDashboard.css">
 </head>
 <body>
-    <div class="dashboard">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h2>My Dashboard</h2>
+    <aside class="sidebar">
+        <div>
+            <h2>Garuda Gym</h2>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Messages</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="/dashboard" class="active">Dashboard</a></li>
+                    <li><a href="/data_masuk">Data Anggota</a></li>
+                    <li><a href="/pesan_masuk">Pesan Masuk</a></li>
+                    <li><a href="/logout">Logout</a></li>
                 </ul>
             </nav>
-        </aside>
+        </div>
+    </aside>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <header>
-                <h1>Welcome Back!</h1>
-                <p>Here is an overview of your account.</p>
-            </header>
-            <section class="cards">
-                <div class="card">
-                    <h3>Total Users</h3>
-                    <p>1,234</p>
-                </div>
-                <div class="card">
-                    <h3>Revenue</h3>
-                    <p>$12,345</p>
-                </div>
-                <div class="card">
-                    <h3>New Messages</h3>
-                    <p>56</p>
-                </div>
-            </section>
-        </main>
-    </div>
+    <main class="main-content">
+        <header>
+            <h1>Selamat Datang, Admin</h1>
+            <p>Kelola data dan pantau statistik anggota gym dengan mudah.</p>
+        </header>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Total Anggota</h3>
+                <p>{{ $totalPendaftaran }}</p>
+            </div>
+            <div class="card">
+                <h3>Pesan Masuk</h3>
+                <p>{{ $totalKontak }}</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            &copy; 2024 Garuda Gym. All Rights Reserved.
+        </footer>
+    </main>
 </body>
 </html>

@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", serif;
 }
 
 body {
@@ -25,7 +25,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan lembut */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan lembut */
     background-color: #fff; /* Pastikan warna background terlihat */
     position: relative;
     z-index: 10;
@@ -36,6 +36,9 @@ header h1 {
     font-size: 24px;
     font-weight: bold;
     color: #333;
+}
+header h1 span {
+    color: #007bff;
 }
 
 nav ul {
@@ -66,12 +69,15 @@ main {
     align-items: center;
     justify-content: center;
     height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 20px;
 }
 
 .form-section {
-    flex: 1;
-    max-width: 400px;
+    display: block;
     padding: 20px;
+    width: 33%;
 }
 
 .form-section h2 {
@@ -127,7 +133,6 @@ form button:hover {
 
 /* Image Section */
 .image-section {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,3 +143,14 @@ form button:hover {
     height: auto;
     object-fit: cover;
 }
+.gambar{
+    width: 40%;
+    /* border: 1px solid blue; */
+  }
+  
+  .gambar img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    object-position: center;
+  }

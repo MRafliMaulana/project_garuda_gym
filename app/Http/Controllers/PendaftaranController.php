@@ -25,4 +25,29 @@ class PendaftaranController extends Controller
 
         return redirect()->back()->with('success', 'Pesan Anda berhasil dikirim.');
     }
+    public function show(Pendaftaran $pendaftaran)
+    {
+        return view('edit_data_pendaftaran.show', ['pendaftaran' => $pendaftaran]);
+    }
+    
+    public function update(Request $request, Pendaftaran $pendaftaran)
+    {
+        $data = $request->validate([
+            'nama' => 'required|string|max:255',
+            'alamat' => 'required|string',
+            'pekerjaan' => 'required|string',
+            'telepon' => 'required|string',
+        ]);
+
+        $pendaftaran->update($data);
+
+        return redirect()->route('edit_data_pendaftaran')->with('success', 'Data berhasil diubah.');
+    }
+    public function destroy(Pendaftaran $pendaftaran)
+    {
+        $pendaftaran->delete();
+
+        return redirect()->route('data_masuk')->with('success', 'Data berhasil dihapus.');
+    }
+
 }

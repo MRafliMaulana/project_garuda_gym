@@ -4,7 +4,7 @@ body{
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", serif;
 }
 
 .navbar {
@@ -13,7 +13,7 @@ body{
   align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
   padding: 20px 5%; /* Memberikan jarak atas 20px dan jarak kanan-kiri 5% */
   background-color: #f8f9fa; /* Contoh warna background, bisa disesuaikan */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Opsional: memberikan bayangan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opsional: memberikan bayangan */
 }
 
 .logo a {
@@ -21,6 +21,9 @@ body{
   font-size: 24px; /* Ukuran font logo */
   font-weight: bold; /* Membuat teks lebih tebal */
   color: #333; /* Warna teks logo */
+}
+.logo span {
+  color: #007bff; /* Warna teks logo */
 }
 
 .menu-nav {
@@ -37,9 +40,11 @@ body{
 
 .menu-nav a:hover {
   color: #007bff; /* Warna teks saat hover */
+  font-weight: bold;
 }
 .menu-nav a.active {
   color: #007bff; /* Warna teks saat aktif */
+  font-weight: bold;
 }
 
 main{
@@ -53,43 +58,64 @@ main{
   justify-content: space-between; /* Memberikan jarak antara aksi dan gambar */
   align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
   gap: 20px;
+  /* border: 1px solid red; */
 }
 
 .aksi {
-  width: 70%;
-  /* border: 1px solid red; */
+  width: 60%;
+  /* border: 1px solid green; */
 }
 
 .aksi h1{
   font-size: 50px;
+  margin: 0;
+
+}
+.aksi h2{
+  font-size: 60px;
+  color: #007bff;
+  margin: 0;
+
+}
+.aksi p{
+  font-size: 17px;
+  max-width: 800px;
+  margin: 0;
+
 }
 
-.gambar {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+.gambar{
+  width: 45%;
+  /* border: 1px solid blue; */
 }
 
-.gambar .gambar-1{
-  position: absolute;
-  transform: translate(-65%, 0);
-  width: 300px;
+.gambar img{
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  z-index: 2;
+}
+.button-daftar {
+  text-align: left;
+  margin-top: 40px;
+  height: 15%;
 }
 
-.gambar .gambar-2{
-  width: 320px;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  object-position: center;
+.button-daftar a {
+  display: online-block;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
+
+.button-daftar a:hover {
+  background-color: #0d63be;
+}
+
 
 
 

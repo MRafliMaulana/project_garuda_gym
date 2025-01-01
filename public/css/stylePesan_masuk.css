@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+    font-family: "Poppins", serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Header */
+h1.text-center {
+    font-size: 28px;
+    color: #084298;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 700;
+}
+p.text-center.text-muted {
+    color: #6c757d;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 14px;
+}
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+    border: 1px solid #ddd; /* Garis luar tabel */
+}
+
+.table thead {
+    background-color: #084298;
+    color: #fff;
+}
+
+.table thead th {
+    padding: 12px 15px;
+    text-align: center; /* Teks rata tengah */
+    border: 1px solid #ddd; /* Garis antar header */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Warna baris genap */
+}
+
+.table tbody tr:hover {
+    background-color: #eaf4ff; /* Warna saat di-hover */
+}
+
+.table tbody td {
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* Garis antar sel */
+    text-align: center; /* Teks rata tengah */
+    vertical-align: middle; /* Vertikal tengah */
+}
+
+/* Optional: Tombol Aksi */
+.btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+
+/* Action Buttons */
+.btn-warning {
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-primary {
+    background-color: #084298;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.btn-primary:hover {
+    background-color: #06357a;
+}
+
+/* Modal Styles */
+.modal .modal-header {
+    background-color: #084298;
+    color: #fff;
+}
+
+.modal .btn-close {
+    color: #fff;
+    opacity: 1;
+}
+
+.modal .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+.modal .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.modal .btn-primary {
+    background-color: #084298;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+.modal .btn-primary:hover {
+    background-color: #06357a;
+}
+
+/* Back Button */
+.text-center .btn-primary {
+    margin-top: 20px;
+}

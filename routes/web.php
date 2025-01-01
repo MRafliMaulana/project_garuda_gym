@@ -5,6 +5,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\PendaftaranController;
+use App\Models\Pendaftaran;
+use App\Models\Kontak;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,12 +35,16 @@ Route::get('/', function () {
 //     return view('dashboard');
 // });
 
+Route::get("test", function(){
+    return Pendaftaran::all();
+});
+
 Route::middleware('guest')->group(function(){
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'authenticate'])->name('login.authenticate');
 });
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/home', function () {
     return view('home');
 })->name('home');
@@ -50,7 +57,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/home', [HomeController::class, 'index'])->name('home');
     });
 });
-
+    
 Route::get('/register', function () {
     return view('register');
 })->name('register.view');
@@ -73,20 +80,40 @@ Route::get('/Pendaftaran', function () {
 Route::get('/Kontak', function () {
     return view('Kontak');
 })->name('Kontak');
-// Route::get('/Kontak', [KontakController::class, 'index'])->name('Kontak');
+Route::get('/data_masuk',function(){
+    $data = [
+        'pendaftaran' => Pendaftaran::all()
+    ];
+    return view('data_masuk', $data);
+});
+Route::get('/edit_data_pendaftaran/{id}', function($id){
+    $pendaftaran = Pendaftaran::find($id);
+    return view('edit_data_pendaftaran', ['pendaftaran' => $pendaftaran]);
+})->name('edit_data_pendaftaran');
+Route::put('/edit_data_pendaftaran/{id}', function(Request $request, $id){
+    $data = $request->validate([
+        'nama' => 'required|string|max:255',
+        'alamat' => 'required|string',
+        'pekerjaan' => 'required|string',
+        'telepon' => 'required|string',
+    ]);
+    Pendaftaran::find($id)->update($data);
+
+    return redirect()->back()->with('success', 'Data berhasil diubah.');
+})->name('edit_data_pendaftaran.update');
+
+Route::delete('data_masuk/{id}', function($id){
+    Pendaftaran::find($id)->delete();
+
+    return redirect()->back()->with('success', 'Data berhasil dihapus.');
+})->name('data_masuk.destroy');
+Route::get('/pesan_masuk',function(){
+    $data = [
+        'kontak' => Kontak::all()
+    ];
+    return view('pesan_masuk', $data);
+});
+
 Route::post('/Kontak', [KontakController::class, 'store'])->name('Kontak.store');
-// Route::get('/Kontak/{id}/edit', [KontakController::class, 'edit'])->name('Kontak.edit');
-// Route::put('/Kontak/{id}', [KontakController::class, 'update'])->name('Kontak.update');
-// Route::delete('/Kontak/{id}', [KontakController::class, 'destroy'])->name('Kontrak.destroy');
+Route::get('/Pendaftaran', [PendaftaranController::class, 'index'])->name('pendaftaran');
 Route::post('/Pendaftaran', [PendaftaranController::class, 'store'])->name('pendaftaran.store');
-// Route::post('forgotPassword', function (Request $request) {
-//     $request->validate(['email' => 'required|email']);
-
-//     $status = Password::sendResetLink(
-//         $request->only('email')
-//     );
-
-//     return $status === Password::RESET_LINK_SENT
-//                 ? back()->with(['status' => __($status)])
-//                 : back()->withErrors(['email' => __($status)]);
-// })->middleware('guest')->name('password.email');

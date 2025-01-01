@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", serif;
 }
 
 /* HTML dan Body Styling */
@@ -34,6 +34,9 @@ body {
   color: #000;
   text-decoration: none;
 }
+.navbar .logo span {
+  color: #007bff;
+}
 
 .menu-nav a {
   margin: 0 15px;
@@ -54,6 +57,7 @@ body {
   text-align: center;
   padding: 60px 20px;
   background-color: #fff;
+  height: 100vh;
 }
 
 .lokasi-container {

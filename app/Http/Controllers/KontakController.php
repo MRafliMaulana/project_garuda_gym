@@ -29,18 +29,14 @@ class KontakController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'nama' => 'required|string',
             'email' => 'required|email',
             'message' => 'required|string',
         ]);
 
-        Kontak::create([
-            'nama' => $request->input('nama'),
-            'email' => $request->input('email'),
-            'message' => $request->input('message'),
-        ]);
-
+        Kontak::create($data);
+    
         return redirect()->back()->with('success', 'Pesan Anda berhasil dikirim.');
     }
 
@@ -49,7 +45,7 @@ class KontakController extends Controller
      */
     public function show(Kontak $kontak)
     {
-        //
+        return view('kontak.show', ['kontak' => $kontak]);
     }
 
     /**

@@ -1,218 +1,157 @@
 /* Reset Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  body {
-    background-color: #fff;
-    color: #333;
-    overflow: hidden; /* Mencegah scroll */
-    height: 100vh; /* Menjaga tinggi halaman 100% layar */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Navigation Bar */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap; /* Memastikan navbar responsif */
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+.logo span {
+  color: #007bff;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.menu-nav a:hover {
+  color: #007bff;
+  font-weight: bold;
+}
+.menu-nav a.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.fasilitas-heading {
+  text-align: center;
+  margin: 50px 20px;
+}
+.fasilitas-heading h1 {
+  font-size: 2.5rem;
+}
+.fasilitas-heading p {
+  font-size: 1.2rem;
+}
+
+/* Fasilitas Cards */
+.fasilitas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.fasilitas-card {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fasilitas-card img {
+  width: 300px;
+  height: 250px; /* Ukuran konsisten untuk semua gambar */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+  border-radius: 10px;
+  border: 1px solid #000000;
+  margin-bottom: 10px;
+}
+
+.fasilitas-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.fasilitas-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.fasilitas-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Call to Action Button */
+.button-daftar {
+  text-align: center;
+  margin: 20px 0;
+}
+.button-daftar a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.button-daftar a:hover {
+  background-color: #0d63be;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #f8f8f8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo a {
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .menu-nav a {
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 1rem;
-    color: #333;
-    transition: color 0.3s ease;
-  }
-  
-  .menu-nav a:hover {
-    color: #007bff;
-  }
-  .menu-nav a.active {
-    color: #007bff;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
   }
 
-  /* Hero Section */
-  .hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #007bff;
-    color: #fff;
-    height: 30%;
-  }
-  
-  .fasilitas-heading {
-    text-align: center;
-    margin: 50px 0; /* Ruang atas dan bawah */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .menu-nav a {
+    margin: 10px 0;
   }
 
   .fasilitas-heading h1 {
     font-size: 2rem;
-    margin-bottom: 15px;
   }
-
   .fasilitas-heading p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
-  
-  /* Fasilitas Cards */
-  .fasilitas-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px;
-    height: 55%;
-  }
-  
-  .fasilitas-card {
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    padding: 15px;
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .fasilitas-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .fasilitas-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-  
-  .fasilitas-card p {
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  .fasilitas-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Call to Action Button */
-  .button-daftar {
-    text-align: center;
-    margin: 10px 0;
-    height: 15%;
-  }
-  
-  .button-daftar a {
-    display: online-block;
-    text-decoration: none;
-    background-color: #28a745;
-    color: #fff;
-    padding: 15px 25px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button-daftar a:hover {
-    background-color: #218838;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      padding: 10px;
-      align-items: center;
-    }
-  
-    .menu-nav a {
-      margin: 5px 0;
-    }
-  
-    .hero-section {
-      height: 25%;
-    }
-  
-    .fasilitas-container {
-      flex-direction: column;
-      gap: 15px;
-      height: auto;
-    }
-  
-    .fasilitas-card {
-      width: 90%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .fasilitas-heading h1 {
-      font-size: 2rem;
-    }
-  
-    .fasilitas-heading p {
-      font-size: 1rem;
-    }
-  
-    .fasilitas-card {
-      width: 100%;
-      margin: 10px;
-    }
-  
-    .button-daftar a {
-      padding: 8px 20px;
-    }
-    /* Fasilitas Heading */
 
-    .fasilitas-heading {
-        text-align: center;
-        margin: 50px 0; /* Ruang atas dan bawah */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .fasilitas-heading h1 {
-        font-size: 3rem; /* Ukuran font besar */
-        font-weight: bold;
-        color: #333; /* Warna teks gelap */
-        letter-spacing: 2px; /* Jarak antar huruf */
-        text-transform: capitalize;
-        font-family: 'Georgia', serif; /* Font klasik elegan */
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    
-    .fasilitas-heading p {
-        font-size: 1.1rem; /* Ukuran deskripsi lebih kecil */
-        color: #666; /* Warna teks lembut */
-        font-style: italic;
-        margin-top: 5px;
-        text-align: center;
-    }
-  
-  
+  .button-daftar a {
+    padding: 10px 20px;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .fasilitas-heading h1 {
+    font-size: 1.8rem;
+  }
+  .fasilitas-heading p {
+    font-size: 0.9rem;
+  }
+
+  .button-daftar a {
+    padding: 8px 15px;
+  }
+}
